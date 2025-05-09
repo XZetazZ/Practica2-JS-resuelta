@@ -1,0 +1,31 @@
+<button id="toggleButton">Hide</button>
+<button id="showButton">Show</button>
+<button id="smartButton">Smart</button>
+<div id="myDiv" style="display: block;">This is a hidden div</div>
+<script>
+  const button = document.getElementById("toggleButton");
+  const div = document.getElementById("myDiv");
+  // show
+  button.addEventListener("click", function () {
+      div.style.display = "none";
+  });
+  // hide
+  const showButton = document.getElementById("showButton");
+  showButton.addEventListener("click", function () {
+      div.style.display = "block";
+  });
+  //smart
+  const smartButton = document.getElementById("smartButton");
+  smartButton.addEventListener("click", function () {
+      if(div.style.display == "" || div.style.display == "block"){
+        div.style.display = "none";
+      }else{
+        div.style.display = "block";
+      }
+      div.style.color = "blue";
+      div.style.fontFamily = "Calibri";
+  });
+
+  // TODO: Create a second button that shows the div again when clicked. the style to apply is div.style.display = "block";
+
+</script>
